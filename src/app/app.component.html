@@ -1,0 +1,22 @@
+
+<div class="head">
+  <!-- <div class="example-button-row"> -->
+    <button (click)="filterQuotes('love')" [ngClass]="{'active': activeFilter === 'love', 'love-color': activeFilter === 'love'}" mat-raised-button >Love</button>
+    <button (click)="filterQuotes('inspiration')" [ngClass]="{'active': activeFilter === 'inspiration', 'motivation-color': activeFilter === 'inspiration'}" mat-raised-button>Motivation</button>
+    <button (click)="filterQuotes('philosophy')" [ngClass]="{'active': activeFilter === 'philosophy', 'philosophy-color': activeFilter === 'philosophy'}" mat-raised-button >Philosophy</button>
+    <button (click)="filterQuotes('hate')" [ngClass]="{'active': activeFilter === 'hate', 'hate-color': activeFilter === 'hate'}" mat-raised-button>Hate</button>
+    <button (click)="filterQuotes('reset')" [ngClass]="{'active': activeFilter === 'reset', 'reset-color': activeFilter === 'reset'}" mat-raised-button>Reset</button>
+    <mat-form-field mt-2>
+      <input matInput placeholder="Search" (input)="searchQuotes($event)" />
+    </mat-form-field>
+  <!-- </div> -->
+</div>
+
+
+<div class="container">
+<div class="card" *ngFor="let ele of filterQuotesData let i=index">
+  <img [src]="getRand()" [alt]="author" />
+  <h2>{{ele.author}}</h2>
+  <p>{{ele.quote}}</p>
+</div>
+</div>
