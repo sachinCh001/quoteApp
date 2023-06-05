@@ -1,4 +1,5 @@
 # QuotesApp
+https://647d9996330680416c2c9bdb--candid-figolla-7a6b2c.netlify.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
 
